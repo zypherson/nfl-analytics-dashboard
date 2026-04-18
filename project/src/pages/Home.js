@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTeams } from "../services/nfl";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
   const [teams, setTeams] = useState([]);
@@ -21,9 +23,11 @@ const Home = () => {
         <p>Loading...</p>
       ) : (
         teams.map((team) => (
-          <div key={team.team.id}>
-            {team.team.name}
-          </div>
+         <Link to={`/team/${team.team.id}`}>
+             <div>
+                {team.team.name}
+             </div>
+        </Link>
         ))
       )}
     </div>
