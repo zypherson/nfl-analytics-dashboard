@@ -28,3 +28,12 @@ export const getPlayersByTeam = async (teamId) => {
     return [];
   }
 };
+export const getPlayerStats = async (playerId) => {
+  try {
+    const res = await api.get(`/players/statistics?player=${playerId}&season=2023`);
+    return res.data.response;
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+};
