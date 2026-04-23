@@ -25,7 +25,7 @@ const TeamDetails = () => {
   return (
     <div>
       <h1>{team.team.name}</h1>
-
+        <img src={team.team.logo} alt={team.team.name} width={100} />
       <h2>Roster</h2>
       {players.length === 0 ? (
         <p>Loading players...</p>
