@@ -9,6 +9,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/team/:id" element={<TeamDetails />} />
         <Route path="/player/:id" element={<PlayerDetails />} />
+        <Route path="/compare" element={<ComparePlayers />} />
       </Routes>
     </Router>
   );
